@@ -1,0 +1,48 @@
+dn: ou=People,dc=test,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=test,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Group
+
+dn: uid=testuser,ou=People,dc=test,dc=com
+uid: testuser
+cn: Test User
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+loginShell: /bin/bash
+uidNumber: 500
+gidNumber: 120
+homeDirectory: /home/testuser
+gecos: Test User,,,,
+userPassword: {SSHA}AIzygLSXlArhAMzddUriXQxf7UlkqopP
+# userpassword: {CLEARTEXT}test
+
+dn: cn=users,ou=Group,dc=test,dc=com
+cn: users
+objectClass: top
+objectClass: posixGroup
+gidNumber: 2
+memberUid: testuser
+
+dn: cn=adm,ou=Group,dc=test,dc=com
+cn: adm
+objectClass: top
+objectClass: posixGroup
+gidNumber: 3
+
+dn: ou=Rooms,dc=test,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Rooms
+
+dn: commonName=meetingRoom,ou=Rooms,dc=test,dc=com
+objectClass: top
+objectClass: room
+commonName: meetingRoom
+roomNumber: 42
+description: The Room where meetings happens
