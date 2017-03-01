@@ -1,5 +1,7 @@
 # Familix
 
+**A service for managing membership**
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
